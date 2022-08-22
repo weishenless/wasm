@@ -2,9 +2,9 @@
 ## Copyright 2022 weishenless.  All rights reserved.
 ##
 
-dir=../out/01_helloworld
-src=helloworld.cpp
-out=$dir/helloworld.html
+dir=../out/03_hello_world_file
+src=hello_world_file.cpp
+out=$dir/hello_world_file.html
 
 if [ ! -d ../out ]; then
     mkdir ../out
@@ -14,4 +14,4 @@ if [ ! -d $dir ]; then
     mkdir $dir
 fi
 
-emcc $src -o $out
+emcc $src -o $out --preload-file txt/hello_world_file.txt
